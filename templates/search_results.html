@@ -1,0 +1,35 @@
+{% extends 'searchDonor.html' %}
+
+{% block content %}
+
+
+ {% if searched %}
+ <h1 class="big-title">Search Results</h1>
+    <br>
+    <div class="top-section">
+      {% for d in donor_data %}
+      <h3 class="details">Name: {{ d.name }}</h3>
+      <h3 class="details">age: {{ d.age }}</h3>
+      <h3 class="details">Gender: {{ d.gender }}</h3>
+      <h3 class="details">BG: {{d.blood_group}}</h3>
+      <h3 class="details">city: {{d.city}}</h3>
+      <h3 class="details">Pnum: {{d.phonenumber}}</h3>
+      <br>
+      <center>
+         <hr>
+      </center>
+      
+      {% endfor %}
+    </div>
+      
+    
+    
+   
+
+ {% else %}
+    <h1></h1>
+{% endif %}
+
+{% endblock %}
+</body>
+</html>
